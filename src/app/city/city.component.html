@@ -1,0 +1,46 @@
+
+<div class = "container">
+  <h2>Add City</h2>
+    <form>
+      <div class = "row">
+        <div class = "col-sm-4">
+          <label for="cityField">City name: </label>
+          <input class="cityField" #cityField>
+        </div>
+        <div class = "col-sm-3">
+          <label for="iconField">Icon: </label>
+          <input class="iconField" #iconField>
+        </div>
+        <div class = "col-sm-3">
+          <label for="statusField">Status: </label>
+          <input class="statusField" #statusField>
+        </div>
+        <div class = "col-sm-2">
+          <button class="btn btn-primary" (click)="addCity(cityField.value, iconField.value, statusField.value)">Add City</button>
+        </div>
+      </div>
+    </form>
+</div>
+
+<div class="container">
+  <h2>Cities</h2>
+  <table class="table" style="width:100%">
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>icon</th>
+      <th>status</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let city of cities | async">
+      <td>{{city.id}}</td>
+      <td>{{city.city}}</td>
+      <td>{{city.icon}}</td>
+      <td>{{city.status}}</td>
+      <td><button class="btn btn-danger" (click)="deleteCity(city)">Delete</button></td>
+    </tr>
+  </table>
+</div>
+
+
+

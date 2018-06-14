@@ -1,0 +1,9 @@
+API KEY: b6907d289e10d714a6e88b30761fae22
+
+***** Example of json from Openweathermap *****
+   http://openweathermap.org/data/2.5/weather?q=[city_name]&appid=[apikey]
+
+   http://openweathermap.org/data/2.5/weather?q=Amsterdam&appid=b6907d289e10d714a6e88b30761fae22
+
+***** Image url from Openweathermap *****
+http://openweathermap.org/img/w/04d.png"

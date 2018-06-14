@@ -1,0 +1,99 @@
+
+<div class = "container">
+    <h2>Search for city</h2>
+    <form>
+      <div class = "row" >
+        <div class="col-sm-12">
+          <label for="cityFields">City Name:</label>
+          <input class="cityFields" #cityFields>
+          <button class="btn btn-primary" (click)="getOpenWeatherMap(cityFields.value)">Search</button>
+        </div>
+      </div>
+    </form>
+    <div *ngIf="errorMessage"> {{errorMessage}} </div>
+
+    <div class="container">
+        <h4>Results</h4>
+        <table class="table" style="width:100%">
+          <tr>
+            <th>ID #</th>
+            <th>City name</th>
+            <th>Country</th>
+            <th>Main</th>
+            <th>Description</th>
+            <th>Temperature</th>
+            <th>Humidity [%]</th>
+            <th><button class="btn btn-primary" (click)="refreshWeatherTable()"><span class="icon-refresh"></span>Refresh</button></th>
+          </tr>
+          <tr *ngFor="let WeatherDataList of weatherDataList">
+            <td>{{WeatherDataList.id}}</td>
+            <td>{{WeatherDataList.name}}</td>
+            <td>{{WeatherDataList.sys.country}}</td>
+            <td>{{WeatherDataList.weather[0].main}}</td>
+            <td>{{WeatherDataList.weather[0].description}}</td>
+            <td>{{WeatherDataList.main.temp}} °C</td>
+            <td>{{WeatherDataList.main.humidity}}</td>
+            <td><button class="btn btn-primary"
+              (click)="addOpenWeatherMap( WeatherDataList.coord.lon,
+                                          WeatherDataList.coord.lat,
+                                          WeatherDataList.weather[0].id,
+                                          WeatherDataList.weather[0].main,
+                                          WeatherDataList.weather[0].description,
+                                          WeatherDataList.weather[0].icon,
+                                          WeatherDataList.base,
+                                          WeatherDataList.main.temp,
+                                          WeatherDataList.main.pressure,
+                                          WeatherDataList.main.sea_level,
+                                          WeatherDataList.main.humidity,
+                                          WeatherDataList.main.temp_min,
+                                          WeatherDataList.main.temp_max,
+                                          WeatherDataList.visibility,
+                                          WeatherDataList.wind.speed,
+                                          WeatherDataList.wind.deg,
+                                          WeatherDataList.clouds.all,
+                                          WeatherDataList.dt,
+                                          WeatherDataList.sys.type,
+                                          WeatherDataList.sys.id,
+                                          WeatherDataList.sys.message,
+                                          WeatherDataList.sys.country,
+                                          WeatherDataList.sys.sunrise,
+                                          WeatherDataList.sys.sunset,
+                                          WeatherDataList.id,
+                                          WeatherDataList.name,
+                                          WeatherDataList.cod)
+                                          ">Add</button></td>
+          </tr>
+        </table>
+      </div>
+
+    <div class="container">
+      <h4>Results</h4>
+      <table class="table" style="width:100%">
+        <tr >
+            <th>ID #</th>
+            <th>City name</th>
+            <th>Country</th>
+            <th>Main</th>
+            <th>Description</th>
+            <th>Temperature</th>
+            <th>Humidity [%]</th>
+          <th><button class="btn btn-primary" (click)="deleteAllWeather()"><span class="icon-refresh"></span>Delete All</button></th>
+        </tr>
+        <tr *ngFor="let WeatherData of weatherDatas | async">
+            <td>{{WeatherData.id}}</td>
+            <td>{{WeatherData.name}}</td>
+            <td>{{WeatherData.sys.country}}</td>
+            <td>{{WeatherData.weather[0].main}}</td>
+            <td>{{WeatherData.weather[0].description}}</td>
+            <td>{{WeatherData.main.temp}} °C</td>
+            <td>{{WeatherData.main.humidity}}</td>
+          <td><button class="btn btn-danger" (click)="deleteWeather(WeatherData)">Delete</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+
+
+
