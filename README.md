@@ -10,9 +10,18 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## After repository is cloned, go inside of repository directory and install dependencies there:
+
+cd openWeatherMap
+Run 'npm install'
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Json-server
+
+Run 'ng json-server' or 'json-server --watch cities.json'
 
 ## Running unit tests
 
