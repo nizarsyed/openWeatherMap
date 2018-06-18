@@ -153,34 +153,36 @@
       },
       "weather": [
         {
-          "id": 800,
-          "main": "Clear",
-          "description": "clear sky",
-          "icon": "01n"
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03d"
         }
       ],
       "base": "stations",
       "main": {
-        "temp": 29.75,
-        "pressure": 1010.34,
-        "sea_level": 1010.87,
-        "humidity": 95,
-        "temp_min": 29.75,
-        "temp_max": 29.75
+        "temp": 33,
+        "pressure": 1001,
+        "humidity": 55,
+        "temp_min": 33,
+        "temp_max": 33
       },
+      "visibility": 6000,
       "wind": {
-        "speed": 9.76,
-        "deg": 236.502
+        "speed": 5.1,
+        "deg": 290
       },
       "clouds": {
-        "all": 0
+        "all": 40
       },
-      "dt": 1528989977,
+      "dt": 1529308500,
       "sys": {
-        "message": 0.0026,
+        "type": 1,
+        "id": 7130,
+        "message": 0.0024,
         "country": "PK",
-        "sunrise": 1528936925,
-        "sunset": 1528986148
+        "sunrise": 1529282556,
+        "sunset": 1529331812
       },
       "id": 1174872,
       "name": "Karachi",
