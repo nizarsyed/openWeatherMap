@@ -21,7 +21,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Json-server
 
-Run 'ng json-server' or 'json-server --watch cities.json'
+Run 'json-server --watch cities.json'
 
 ## Running unit tests
 
