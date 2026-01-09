@@ -76,7 +76,7 @@
                             </div>
                         </td>
                         <td>{{ (data.main.temp - 273.15) | number:'1.0-1' }}°C</td>
-                        <td>{{ data.wind.speed }} m/s</td>
+                        <td>{{ data.wind.speed | number:'1.0-2' }} m/s</td>
                         <td>{{ data.clouds.all }}%</td>
                         <td class="text-end">
                             <button class="btn btn-sm btn-outline-danger" (click)="deleteWeather(data.id)">

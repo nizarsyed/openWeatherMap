@@ -10,170 +10,41 @@
   "weather": [
     {
       "coord": {
-        "lon": 4.89,
-        "lat": 52.37
+        "lon": 4.8897,
+        "lat": 52.374
       },
       "weather": [
         {
-          "id": 302,
-          "main": "Drizzle",
-          "description": "heavy intensity drizzle",
-          "icon": "09d"
+          "id": 0,
+          "main": "Light snow",
+          "description": "Light snow",
+          "icon": "https://cdn.weatherapi.com/weather/64x64/night/326.png"
         }
       ],
       "base": "stations",
       "main": {
-        "temp": 17.29,
-        "pressure": 1012,
-        "humidity": 68,
-        "temp_min": 15,
-        "temp_max": 19
+        "temp": 273.54999999999995,
+        "pressure": 994,
+        "humidity": 86,
+        "temp_min": 273.54999999999995,
+        "temp_max": 273.54999999999995
       },
       "visibility": 10000,
       "wind": {
-        "speed": 11.3,
-        "deg": 220
+        "speed": 6.888888888888889,
+        "deg": 117
       },
       "clouds": {
         "all": 75
       },
-      "dt": 1528984500,
+      "dt": 1767997570,
       "sys": {
-        "type": 1,
-        "id": 5204,
-        "message": 0.0024,
-        "country": "NL",
-        "sunrise": 1528946269,
-        "sunset": 1529006645
+        "country": "Netherlands",
+        "sunrise": 0,
+        "sunset": 0
       },
-      "id": 2759794,
+      "id": 3383334,
       "name": "Amsterdam",
-      "cod": 200
-    },
-    {
-      "coord": {
-        "lon": 4.46,
-        "lat": 51.92
-      },
-      "weather": [
-        {
-          "id": 300,
-          "main": "Drizzle",
-          "description": "light intensity drizzle",
-          "icon": "09d"
-        }
-      ],
-      "base": "stations",
-      "main": {
-        "temp": 17.99,
-        "pressure": 1012,
-        "humidity": 63,
-        "temp_min": 15,
-        "temp_max": 19
-      },
-      "visibility": 10000,
-      "wind": {
-        "speed": 9.3,
-        "deg": 220
-      },
-      "clouds": {
-        "all": 90
-      },
-      "dt": 1528984500,
-      "sys": {
-        "type": 1,
-        "id": 5214,
-        "message": 0.0365,
-        "country": "NL",
-        "sunrise": 1528946528,
-        "sunset": 1529006593
-      },
-      "id": 2747891,
-      "name": "Rotterdam",
-      "cod": 200
-    },
-    {
-      "coord": {
-        "lon": -55.18,
-        "lat": 5.82
-      },
-      "weather": [
-        {
-          "id": 802,
-          "main": "Clouds",
-          "description": "scattered clouds",
-          "icon": "03d"
-        }
-      ],
-      "base": "stations",
-      "main": {
-        "temp": 31,
-        "pressure": 1015,
-        "humidity": 62,
-        "temp_min": 31,
-        "temp_max": 31
-      },
-      "visibility": 10000,
-      "wind": {
-        "speed": 4.76,
-        "deg": 59.5018
-      },
-      "clouds": {
-        "all": 40
-      },
-      "dt": 1528988400,
-      "sys": {
-        "type": 1,
-        "id": 4785,
-        "message": 0.0024,
-        "country": "SR",
-        "sunrise": 1528968444,
-        "sunset": 1529013297
-      },
-      "id": 3383330,
-      "name": "Paramaribo",
-      "cod": 200
-    },
-    {
-      "coord": {
-        "lon": 67.03,
-        "lat": 24.87
-      },
-      "weather": [
-        {
-          "id": 802,
-          "main": "Clouds",
-          "description": "scattered clouds",
-          "icon": "03d"
-        }
-      ],
-      "base": "stations",
-      "main": {
-        "temp": 33,
-        "pressure": 1001,
-        "humidity": 55,
-        "temp_min": 33,
-        "temp_max": 33
-      },
-      "visibility": 6000,
-      "wind": {
-        "speed": 5.1,
-        "deg": 290
-      },
-      "clouds": {
-        "all": 40
-      },
-      "dt": 1529308500,
-      "sys": {
-        "type": 1,
-        "id": 7130,
-        "message": 0.0024,
-        "country": "PK",
-        "sunrise": 1529282556,
-        "sunset": 1529331812
-      },
-      "id": 1174872,
-      "name": "Karachi",
       "cod": 200
     },
     {
@@ -184,20 +55,20 @@
       "weather": [
         {
           "id": 0,
-          "main": "Light rain",
-          "description": "Light rain",
-          "icon": "296"
+          "main": "Light snow",
+          "description": "Light snow",
+          "icon": "https://cdn.weatherapi.com/weather/64x64/night/326.png"
         }
       ],
       "base": "stations",
       "main": {
-        "temp": 275.25,
-        "pressure": 994,
-        "humidity": 87,
-        "temp_min": 275.25,
-        "temp_max": 275.25
+        "temp": 274.25,
+        "pressure": 995,
+        "humidity": 93,
+        "temp_min": 274.25,
+        "temp_max": 274.25
       },
-      "visibility": 10000,
+      "visibility": 5000,
       "wind": {
         "speed": 3.8055555555555554,
         "deg": 273
@@ -205,14 +76,131 @@
       "clouds": {
         "all": 0
       },
-      "dt": 1767996715,
+      "dt": 1767997548,
       "sys": {
         "country": "Netherlands",
         "sunrise": 0,
         "sunset": 0
       },
-      "id": 3383331,
+      "id": 3383335,
       "name": "The Hague",
+      "cod": 200
+    },
+    {
+      "coord": {
+        "lon": -55.1667,
+        "lat": 5.8333
+      },
+      "weather": [
+        {
+          "id": 0,
+          "main": "Patchy rain nearby",
+          "description": "Patchy rain nearby",
+          "icon": "https://cdn.weatherapi.com/weather/64x64/night/176.png"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 297.45,
+        "pressure": 1011,
+        "humidity": 90,
+        "temp_min": 297.45,
+        "temp_max": 297.45
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 3.5,
+        "deg": 63
+      },
+      "clouds": {
+        "all": 70
+      },
+      "dt": 1767997589,
+      "sys": {
+        "country": "Suriname",
+        "sunrise": 0,
+        "sunset": 0
+      },
+      "id": 3383336,
+      "name": "Paramaribo",
+      "cod": 200
+    },
+    {
+      "coord": {
+        "lon": -118.2428,
+        "lat": 34.0522
+      },
+      "weather": [
+        {
+          "id": 0,
+          "main": "Sunny",
+          "description": "Sunny",
+          "icon": "https://cdn.weatherapi.com/weather/64x64/day/113.png"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 290.95,
+        "pressure": 1026,
+        "humidity": 18,
+        "temp_min": 290.95,
+        "temp_max": 290.95
+      },
+      "visibility": 16000,
+      "wind": {
+        "speed": 1.8055555555555556,
+        "deg": 281
+      },
+      "clouds": {
+        "all": 0
+      },
+      "dt": 1767997569,
+      "sys": {
+        "country": "United States of America",
+        "sunrise": 0,
+        "sunset": 0
+      },
+      "id": 3383337,
+      "name": "Los Angeles",
+      "cod": 200
+    },
+    {
+      "coord": {
+        "lon": 4.8897,
+        "lat": 52.374
+      },
+      "weather": [
+        {
+          "id": 0,
+          "main": "Light snow",
+          "description": "Light snow",
+          "icon": "https://cdn.weatherapi.com/weather/64x64/night/326.png"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 273.54999999999995,
+        "pressure": 994,
+        "humidity": 86,
+        "temp_min": 273.54999999999995,
+        "temp_max": 273.54999999999995
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 6.888888888888889,
+        "deg": 117
+      },
+      "clouds": {
+        "all": 75
+      },
+      "dt": 1767998085,
+      "sys": {
+        "country": "Netherlands",
+        "sunrise": 0,
+        "sunset": 0
+      },
+      "id": 3383338,
+      "name": "Amsterdam",
       "cod": 200
     }
   ]

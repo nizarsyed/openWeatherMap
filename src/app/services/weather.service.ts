@@ -43,7 +43,7 @@ export class WeatherService {
                             id: 0, // Not provided by simple response
                             main: response.current.condition.text,
                             description: response.current.condition.text,
-                            icon: response.current.condition.icon.split('/').pop().replace('.png', '') // Extract icon code approx
+                            icon: 'https:' + response.current.condition.icon // Use full URL from WeatherAPI
                         }],
                         base: 'stations',
                         main: {
@@ -55,7 +55,7 @@ export class WeatherService {
                         },
                         visibility: response.current.vis_km * 1000,
                         wind: {
-                            speed: response.current.wind_kph / 3.6, // km/h to m/s
+                            speed: Math.round((response.current.wind_kph / 3.6) * 100) / 100, // km/h to m/s, rounded to 2 decimals
                             deg: response.current.wind_degree
                         },
                         clouds: {
