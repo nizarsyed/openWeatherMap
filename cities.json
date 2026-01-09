@@ -1,22 +1,10 @@
 {
   "cities": [
     {
-      "id": 7,
-      "city": "ADRIEL",
-      "icon": "456",
-      "status": "PENDEW"
-    },
-    {
-      "id": 8,
-      "city": "QUINCY",
-      "icon": "456",
-      "status": "Mariku"
-    },
-    {
-      "id": 9,
-      "city": "qwe",
-      "icon": "qwe",
-      "status": "qwe"
+      "id": 10,
+      "city": "test",
+      "icon": "04d",
+      "status": "test"
     }
   ],
   "weather": [
@@ -186,6 +174,45 @@
       },
       "id": 1174872,
       "name": "Karachi",
+      "cod": 200
+    },
+    {
+      "coord": {
+        "lon": 4.2986,
+        "lat": 52.0767
+      },
+      "weather": [
+        {
+          "id": 0,
+          "main": "Light rain",
+          "description": "Light rain",
+          "icon": "296"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 275.25,
+        "pressure": 994,
+        "humidity": 87,
+        "temp_min": 275.25,
+        "temp_max": 275.25
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 3.8055555555555554,
+        "deg": 273
+      },
+      "clouds": {
+        "all": 0
+      },
+      "dt": 1767996715,
+      "sys": {
+        "country": "Netherlands",
+        "sunrise": 0,
+        "sunset": 0
+      },
+      "id": 3383331,
+      "name": "The Hague",
       "cod": 200
     }
   ]

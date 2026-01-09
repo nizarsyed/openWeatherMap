@@ -1,0 +1,67 @@
+<div class="card shadow-sm mb-4 glass-panel">
+    <div class="card-header bg-transparent border-0">
+        <h3 class="mb-0 text-white"><i class="fas fa-list"></i> Managed Cities</h3>
+    </div>
+    <div class="card-body">
+        <!-- Add City Form -->
+        <div class="row g-3 mb-4 align-items-end">
+            <div class="col-md-4">
+                <label for="cityName" class="form-label text-white-50">City Name</label>
+                <input type="text" class="form-control" id="cityName" [(ngModel)]="modelCity" placeholder="e.g. London">
+            </div>
+            <div class="col-md-3">
+                <label for="status" class="form-label text-white-50">Status</label>
+                <input type="text" class="form-control" id="status" [(ngModel)]="modelStatus" placeholder="e.g. Cloudy">
+            </div>
+            <div class="col-md-3">
+                <label for="icon" class="form-label text-white-50">Icon Code</label>
+                <input type="text" class="form-control" id="icon" [(ngModel)]="modelIcon" placeholder="e.g. 04d">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100" (click)="addCity()" [disabled]="!modelCity">
+                    <i class="fas fa-plus"></i> Add
+                </button>
+            </div>
+        </div>
+
+        <!-- Cities List -->
+        <div class="table-responsive">
+            <table class="table table-hover table-dark table-borderless align-middle rounded-table">
+                <thead class="table-light text-dark">
+                    <tr>
+                        <th>City</th>
+                        <th>Icon</th>
+                        <th>Status</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let city of cities$ | async">
+                        <td class="fw-bold">{{ city.city }}</td>
+                        <td>
+                            <ng-container *ngIf="city.icon">
+                                <ng-container *ngIf="city.icon.startsWith('http'); else legacyCityIcon">
+                                    <img [src]="city.icon" alt="icon" class="weather-icon-sm">
+                                </ng-container>
+                                <ng-template #legacyCityIcon>
+                                    <img [src]="'http://openweathermap.org/img/w/' + city.icon + '.png'" alt="icon"
+                                        class="weather-icon-sm">
+                                </ng-template>
+                            </ng-container>
+                            <span *ngIf="!city.icon" class="text-muted">-</span>
+                        </td>
+                        <td>{{ city.status }}</td>
+                        <td class="text-end">
+                            <button class="btn btn-sm btn-outline-danger" (click)="deleteCity(city.id)">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr *ngIf="(cities$ | async)?.length === 0">
+                        <td colspan="4" class="text-center text-muted py-3">No cities managed yet.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

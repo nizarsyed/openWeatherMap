@@ -1,17 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-light navbarWeather">
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto"></ul>
-  </div>
-</nav>
+<div class="app-background min-vh-100 py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <h1 class="display-4 text-white fw-bold header-title">
+          <i class="fas fa-bolt text-warning"></i> Weather<span class="text-info">Map</span>
+        </h1>
+        <p class="lead text-white-50">Real-time weather data & management dashboard</p>
+      </div>
+    </div>
 
-<div class="container">
-    <div class="row">
-      <div class="col-sm">
-          <app-weather></app-weather>
+    <div class="row g-4">
+      <!-- City Management Section -->
+      <div class="col-lg-5">
+        <app-city></app-city>
+      </div>
 
-
-          <app-city></app-city>
+      <!-- Weather Dashboard Section -->
+      <div class="col-lg-7">
+        <app-weather></app-weather>
       </div>
     </div>
   </div>
-
+</div>

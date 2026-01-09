@@ -1,0 +1,95 @@
+<div class="card shadow-sm mb-4 glass-panel">
+    <div class="card-header bg-transparent border-0">
+        <h3 class="mb-0 text-white"><i class="fas fa-cloud-sun"></i> Weather Dashboard</h3>
+    </div>
+    <div class="card-body">
+        <!-- Search Section -->
+        <div class="input-group mb-4">
+            <input type="text" class="form-control" placeholder="Search for a city..." [(ngModel)]="searchQuery"
+                (keyup.enter)="searchWeather()">
+            <button class="btn btn-warning text-dark fw-bold" type="button" (click)="searchWeather()">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+
+        <!-- Error Message -->
+        <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+            {{ errorMessage }}
+        </div>
+
+        <!-- Search Result Card -->
+        <div *ngIf="searchResult && searchResult.length > 0" class="mb-5 fadeIn">
+            <h5 class="text-white mb-3">Found City:</h5>
+            <div class="card bg-light text-dark weather-card">
+                <div class="card-body d-flex align-items-center justify-content-between">
+                    <div>
+                        <h4 class="card-title">{{ searchResult[0].name }}, {{ searchResult[0].sys.country }}</h4>
+                        <p class="card-text mb-0">
+                            <span class="badge bg-primary">{{ searchResult[0].weather[0].description }}</span>
+                            <span class="ms-2 fw-bold text-dark">{{ (searchResult[0].main.temp - 273.15) |
+                                number:'1.0-1' }}°C</span>
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <ng-container *ngIf="searchResult[0].weather[0].icon.startsWith('http'); else legacyIcon">
+                            <img [src]="searchResult[0].weather[0].icon" alt="icon" class="weather-icon-lg">
+                        </ng-container>
+                        <ng-template #legacyIcon>
+                            <img [src]="'http://openweathermap.org/img/w/' + searchResult[0].weather[0].icon + '.png'"
+                                alt="icon" class="weather-icon-lg">
+                        </ng-template>
+                    </div>
+                    <button class="btn btn-success" (click)="saveWeather(searchResult[0])">
+                        <i class="fas fa-save"></i> Save to List
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Saved Weather List -->
+        <h5 class="text-white mb-3 border-bottom pb-2">Saved Reports</h5>
+        <div class="table-responsive">
+            <table class="table table-hover table-dark table-borderless align-middle rounded-table">
+                <thead class="table-light text-dark">
+                    <tr>
+                        <th>City</th>
+                        <th>Details</th>
+                        <th>Temp</th>
+                        <th>Wind</th>
+                        <th>Clouds</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of savedWeather$ | async">
+                        <td class="fw-bold">{{ data.name }}</td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <ng-container *ngIf="data.weather[0].icon.startsWith('http'); else legacySavedIcon">
+                                    <img [src]="data.weather[0].icon" alt="icon" class="me-2 weather-icon-sm">
+                                </ng-container>
+                                <ng-template #legacySavedIcon>
+                                    <img [src]="'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png'"
+                                        alt="icon" class="me-2 weather-icon-sm">
+                                </ng-template>
+                                <span>{{ data.weather[0].main }}</span>
+                            </div>
+                        </td>
+                        <td>{{ (data.main.temp - 273.15) | number:'1.0-1' }}°C</td>
+                        <td>{{ data.wind.speed }} m/s</td>
+                        <td>{{ data.clouds.all }}%</td>
+                        <td class="text-end">
+                            <button class="btn btn-sm btn-outline-danger" (click)="deleteWeather(data.id)">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr *ngIf="(savedWeather$ | async)?.length === 0">
+                        <td colspan="6" class="text-center text-muted py-3">No weather reports saved. Search and add
+                            some!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

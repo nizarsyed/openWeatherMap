@@ -1,14 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
-import { CityComponent } from './city/city.component';
-import { HttpModule } from '@angular/http';
-import { CityService } from './_shared/city.service';
-import { enableProdMode } from '@angular/core';
-import { WeatherComponent } from './weather/weather.component';
-import { WeatherService } from './_shared/weather.service';
-enableProdMode();
+import { CityComponent } from './components/city/city.component';
+import { WeatherComponent } from './components/weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +15,11 @@ enableProdMode();
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     FormsModule
   ],
-  providers: [CityService, WeatherService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
